@@ -29,3 +29,9 @@ leecode通过截图如下：
 
 ## 任务二
 Vscode连接InternStudio debug笔记
+1.设置断点后分步执行，确认函数执行无问题，正常返回了结果
+![img.png](img.png)
+2.查看res值无问题
+![img_2.png](img_2.png)
+3.执行读取json值操作时出现问题，可能原因为json为空值（已排除）或格式错误
+![img_3.png](img_3.png)
