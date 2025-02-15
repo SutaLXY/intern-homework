@@ -27,3 +27,4 @@
 
 
 - 将你的Agent部署到 Hugging Face 或 ModelScope 平台，应用名包含 Lagent 关键词（优秀学员必做，注意千万别泄露了 API Key，不要在上传到 Hugging Face 的代码里面明文写 Key 而是使用环境变量的方式获取。）
+已部署：https://huggingface.co/spaces/SutaLXY/internlm_lagent
