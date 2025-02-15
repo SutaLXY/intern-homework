@@ -5,6 +5,13 @@
 - 使用Function call功能让大模型完成一次简单的"加"与"乘"函数调用，作业截图需包括大模型回复的工具调用情况，参考4.2 Function call(选做)
 
 ### 1. 使用结合W4A16量化与kv cache量化的`internlm2_5-1_8b-chat`模型
+- 按照教程创建一个lmdeploy的conda环境，并安装相关包
+
+         conda create -n lmdeploy  python=3.10 -y
+         conda activate lmdeploy
+         conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia -y
+         pip install timm==1.0.8 openai==1.40.3 lmdeploy[all]==0.5.3
+         pip install datasets==2.19.2
 - 直接用lmdeploy启动InternLM2_5-7b-chat，显存占用23GB，96.14%
 ![img_1.png](img_1.png)
 - 用W4A16量化+kv cache量化后启用API，显存占用11+GB，本地映射后可以打开api页面

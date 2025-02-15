@@ -2,7 +2,7 @@
 
 ## **任务（完成此任务即完成闯关）**
 
-- 使用 Lagent 复现文档中 “制作一个属于自己的Agent” 和 “Multi-Agents博客写作系统的搭建”两部分内容，记录复现过程并截图。
+### 使用 Lagent 复现文档中 “制作一个属于自己的Agent” 和 “Multi-Agents博客写作系统的搭建”两部分内容，记录复现过程并截图。
 
 1. 复现文档中 “制作一个属于自己的Agent”
    1. 下载配置Lagent环境，按教程新建运行ArxivSearch这个agent
@@ -26,5 +26,9 @@
    ![img_7.png](img_7.png)
 
 
-- 将你的Agent部署到 Hugging Face 或 ModelScope 平台，应用名包含 Lagent 关键词（优秀学员必做，注意千万别泄露了 API Key，不要在上传到 Hugging Face 的代码里面明文写 Key 而是使用环境变量的方式获取。）
+### 将你的Agent部署到 Hugging Face 或 ModelScope 平台，应用名包含 Lagent 关键词
+
 已部署：https://huggingface.co/spaces/SutaLXY/internlm_lagent
+- 中间参考教程，本来想直接git push到Hugging Face，但是发现网络条件不支持。教程里clone的是hf-mirror镜像的仓库，应该也没法直接push到hugging face上吧。agent文件比较小，所以我是用了笨办法，直接上传的文件。
+
+![img_8.png](img_8.png)
