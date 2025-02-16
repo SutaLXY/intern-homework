@@ -5,13 +5,37 @@
 ### 使用 Lagent 复现文档中 “制作一个属于自己的Agent” 和 “Multi-Agents博客写作系统的搭建”两部分内容，记录复现过程并截图。
 
 1. 复现文档中 “制作一个属于自己的Agent”
-   1. 下载配置Lagent环境，按教程新建运行ArxivSearch这个agent
-   ![img.png](img.png)
-   2. 不选中ArxivSearch的情况下，询问“帮我查下rag优化方面的论文，讲解下rag优化的方法”。模型开始胡说八道，说RAG优化的目标是面对不确定性时，找到一个最小化风险的解决方案
+   1. 下载配置Lagent环境
+   
+            # 创建环境
+            conda create -n lagent python=3.10 -y
+   
+            # 激活环境
+            conda activate lagent
+   
+            # 安装 torch
+            conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia -y
+   
+            # 安装其他依赖包
+            pip install termcolor==2.4.0
+            pip install streamlit==1.39.0
+            pip install class_registry==2.1.2
+            pip install datasets==3.1.0
+   
+            # 安装 lagent
+            mkdir -p /root/agent_camp4
+            cd /root/agent_camp4
+            git clone https://github.com/InternLM/lagent.git
+            cd lagent && git checkout e304e5d && pip install -e . && cd ..
+            pip install griffe==0.48.0
+
+   2. 按教程创建agent_api_web_demo.py，复制代码，运行ArxivSearch这个agent
+![img.png](img.png)
+   3. 不选中ArxivSearch的情况下，询问“帮我查下rag优化方面的论文，讲解下rag优化的方法”。模型开始胡说八道，说RAG优化的目标是面对不确定性时，找到一个最小化风险的解决方案
    ![img_1.png](img_1.png)
-   3. 选中ArxivSearch的情况下，问同样的问题，模型给出了RAG正确的概念，和一些包括摘要的论文
+   4. 选中ArxivSearch的情况下，问同样的问题，模型给出了RAG正确的概念，和一些包括摘要的论文
    ![img_2.png](img_2.png)
-   4. 增加天气的agent配置、参考教程复制相关的代码。在选中、不选中天气agent的情况下，对比回答。未选中的情况下给出了详实丰富的错误答案。选中的情况下，给出了比较标准格式的正确答案。
+   5. 增加天气的agent配置、参考教程复制相关的代码。在选中、不选中天气agent的情况下，对比回答。未选中的情况下给出了详实丰富的错误答案。选中的情况下，给出了比较标准格式的正确答案。
    ![img_3.png](img_3.png)
 
 

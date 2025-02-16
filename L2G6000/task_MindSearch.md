@@ -7,5 +7,17 @@
 ![img.png](img.png)
 2. 部署完成
 ![img_2.png](img_2.png)
-3. 提问
+3. 提问，这里发现查询的时候报错。回到了官方的Spaces应用试用了下，也是同样的地方报错，看了下日志，应该是DuckDuckGoSearch的问题
 ![img_3.png](img_3.png)
+![img_5.png](img_5.png)
+4. 按照教程，尝试替换不同搜索引擎，包括：
+   
+        BingSearch 为 Bing 搜索引擎。
+        BraveSearch 为 Brave 搜索引擎。
+        GoogleSearch 为 Google Serper 搜索引擎。 
+        TencentSearch 为 Tencent 搜索引擎。
+   ![img_4.png](img_4.png)
+5. 试试用不同搜索引擎均报错，发现除了DuckDuckGo外均需要密钥，试了申请部分密钥，替换后仍有不兼容问题。
+6. 本地部署又试了下，发现用DuckDuckGo偶尔能成功，推测为DuckDuckGo的api限制了使用频率
+![img_6.png](img_6.png)
+        
