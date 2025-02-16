@@ -1,9 +1,23 @@
 ## 基础任务（完成此任务即完成闯关并获得 100 算力点）
 使用 XTuner 微调 InternLM2-Chat-7B 实现自己的小助手认知(webUI)，如下图所示（图中的尖米需替换成自己的昵称），记录复现过程并截图。
 
-1. 构建一个 Python-3.10 的虚拟环境并安装XTuner后，通过xtuner list-cfg命令，验证是否能打印配置文件列表。
+1. 构建一个 Python-3.10 的虚拟环境并安装XTuner
+
+        #构建环境
+        cd ~
+        #git clone 本repo
+        git clone https://github.com/InternLM/Tutorial.git -b camp4
+        mkdir -p /root/finetune && cd /root/finetune
+        conda create -n xtuner-env python=3.10 -y
+        conda activate xtuner-env
+        
+        #安装xtuner
+        cd /root/Tutorial/docs/L1/XTuner
+        pip install -r requirements.txt
+
+2. 通过xtuner list-cfg命令，验证是否能打印配置文件列表。
 ![img_1.png](img_1.png)
-2. 创建修改脚本，把模型认知的名字修改成自己的名字，执行脚本后可以看到，"Suta"的名字已经出现在数据中了
+2. 创建修改脚本 touch /root/finetune/data/change_script.py ，copy教程代码，把模型认知的名字修改成自己的名字，执行脚本后可以看到，"Suta"的名字已经出现在数据中了
 ![img.png](img.png)
 3. 获取官方写好的 config，按教程修改，修改后保存，就开始微调了
 ![img_2.png](img_2.png)

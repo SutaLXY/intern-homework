@@ -17,7 +17,7 @@
           pip install importlib-metadata
 2. 配置OpenCompass及评测参数
 ![配置模型.png](img_4.png)
-2. 报错，目测是numpy版本问题，看到教程评测本地模型时为了解决兼容问题需要卸载重装numpy，于是照做
+2. 运行 python run.py --models puyu_api.py --datasets demo_cmmlu_chat_gen.py --debug ，报错，目测是numpy版本问题，看到教程评测本地模型时为了解决兼容问题需要卸载重装numpy，于是照做
 ![缺失numpy.png](img.png)
 3. 报错，这次是rouge版本问题，于是卸载重装rouge
 ![缺失rouge.png](img_1.png)
